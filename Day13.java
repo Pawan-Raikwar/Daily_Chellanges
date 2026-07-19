@@ -17,3 +17,21 @@ class Solution {
     return false;
     }
 }
+
+/// class Solution {
+    public String removeDuplicates(String s) {
+        // code here
+        int n=s.length();
+        StringBuilder str=new StringBuilder();
+        
+        for(int i=1;i<n;i++){
+            if(s.charAt(i-1)==s.charAt(i)){
+                continue;
+            }
+            else if(s.charAt(i-1)!=s.charAt(i)){
+                str.append(s.charAt(i-1));
+            }
+        }
+        str.append(s.charAt(n-1));
+        return str.toString();
+    }
